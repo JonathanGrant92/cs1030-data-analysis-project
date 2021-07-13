@@ -17,6 +17,10 @@ body {
 	text-align: center;
 }
 
+figure {
+	text-align: left;
+}
+
 header {
 	display: block;
 	position: fixed;
@@ -35,7 +39,7 @@ main {
 }
 
 menu li, menu li a {
-	display: inline;
+	display: inline-grid;
 	background: orangered;
 	border-radius: 12px;
 	padding: 4px;
