@@ -1,0 +1,52 @@
+html {
+	box-sizing: border-box;
+	scroll-padding-top: 11em;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+a:hover {
+	color: black;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+header {
+	display: block;
+	position: fixed;
+	left: 0; 
+	right: 0; 
+	top: 0;	
+	background: cornsilk;
+}
+
+main {
+	padding: 2em;
+	margin: 4em;
+	margin-top: 12em;
+	text-align: justify;
+	background: lavender;
+}
+
+menu li, menu li a {
+	display: inline;
+	background: orangered;
+	border-radius: 12px;
+	padding: 4px;
+	color: white;
+}
+
+menu li:hover, menu li a:hover {
+	background: white;
+	color: orangered;
+}
+
+section {
+	padding-left: 32px;
+}
