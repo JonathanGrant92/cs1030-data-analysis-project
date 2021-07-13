@@ -17,8 +17,9 @@ body {
 	text-align: center;
 }
 
-figure {
+figcaption {
 	text-align: left;
+	word-wrap: break-word;
 }
 
 header {
