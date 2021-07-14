@@ -9,7 +9,7 @@
 
 <body>
 	<header>
-		<h1>American Housing Analysis</h1>
+		<h1>American Housing Affordability Analysis</h1>
 		<p>Data collected from most recent survey, 2013, of housing data.</p>
 		<nav>
 			<menu>
@@ -31,7 +31,7 @@
 				<p>The Housing Affordability Data System (HADS) is a set of files derived from the 1985 and later national American Housing Survey (AHS) and the 2002 and later Metro AHS. This system categorizes housing units by <em>affordability and households by income</em>, with respect to the <em>Adjusted Median Income, Fair Market Rent (FMR), and poverty income</em>. It also includes <em>housing cost burden</em> for owner and renter households. These files have been the basis for the worst case needs tables since 2001. The data files are available for public use, since they were derived from AHS public use files and the published income limits and FMRs. We are providing these files give the community of housing analysts the opportunity to use a consistent set of affordability measures.</p>
 			</blockquote>
 			<figcaption>American Housing Survey: Housing Affordability Data System<br>
-				<cite><a href="https://www.huduser.gov/portal/datasets/hads/hads.html" target="blank">https://www.huduser.gov/portal/datasets/hads/hads.html</a></cite>
+				<cite><a href="https://www.huduser.gov/portal/datasets/hads/hads.html" target="_blank">https://www.huduser.gov/portal/datasets/hads/hads.html</a></cite>
 			</figcaption>
 		</figure>
 		<hr>
@@ -39,35 +39,86 @@
 		<section>
 			<h3>Categories</h3>
 			<ul>
-				<li>affordability</li>
-				<li>income</li>
-				<li>household type</li>
+				<li>housing units by affordability</li>
+				<li>households by income</li>
+				<li>housing cost burden by household type</li>
 			</ul>
-			<h3>Metrics</h3>
+			<h3>Significant Metrics</h3>
 			<ul>
 				<li>Ajusted Median Income</li>
 				<li>Fair Market Rent (FMR)</li>
 				<li>poverty income</li>
-				<li>housing cost burden</li>
+				<li>household type</li>
 			</ul>
 		</section>
 		<hr>
 		<h2 id="inquiries">Inquiries</h2>
-		<ul>
-			<li>What is the correlation between housing affordability and household income?</li>
-			<li>What is the correlation between housing cost burden and household type?</li>
-			<li>What is the correlation between poverty income and household type?</li>
-			<li>What are the correlations between affordability and the metrics?</li>
-		</ul>
+		<section>
+			<ul>
+				<li>What is the correlation between housing affordability and household income?</li>
+				<li>What is the correlation between housing cost burden and household type?</li>
+				<li>What is the correlation between poverty income and household type?</li>
+				<li>What are the correlations between affordability and the metrics?</li>
+			</ul>
+		</section>
 		<hr>
 		<h2 id="process">Process</h2>
-		<h3>Initial Phase</h3>
-		<ol>
-			<li>Discovered data from a data.gov <a href="https://catalog.data.gov/dataset/housing-affordability-data-system-hads">entry</a> by file type and category, csv and economy.</li>
-			<li>Analysed synopsis of data set for keywords, which led to observations and inquiries. </li>
-		</ol>
+		<section>
+			<h3>Steps</h3>
+			<ol>
+				<li>Discovered data from a data.gov <a href="https://catalog.data.gov/dataset/housing-affordability-data-system-hads">entry</a> by file type and category (csv format and economic issues).</li>
+				<li>Analysed synopsis of data set for keywords, which led to observations and inquiries.</li>
+				<li>Downloaded and skimmed HADS documentation.</li>
+				<li>Downloaded and opened the ASCII version zip for 2013</li>
+				<li>Attempted to import file into Google sheets, but the csv file is 53 mb.</li>
+				<li>Opened csv file in gedit and libreoffice calc; there are 64,535 records with 73 fields per record.
+					<br>Queue time to think about best approaches with a moderately sized data set; options include:
+					<ul>
+						<li>office software like libre office calc</li>
+						<li>a database management system like libreoffice base or mysql</li>
+						<li>an object relational model like jpa coupled with hibernate in Java</li> 
+					</ul>
+					To address inquiries:
+					<ul>
+						<li>Records need to be filtered by values of several metrics.</li>
+						<li>Values should be plotted on a graph to visualize cross sections of data.</li>
+					</ul>
+					So, office software like libre office calc would be useful. However, mysql workbench is more familiar for querying data sets. Therefore, a combination of mysql workbench and libre office calc is desirable.
+				</li>
+			</ol>
+			<h3>Associated Sources</h3>
+			<ol>
+				<li><a href="HADS_doc.pdf" target="_blank">Housing Affordability Documentation</a></li>
+				<li><a href="thads2013n.ods" target="_blank">Housing Affordability Data Set</a>: 30.5mb download in ods format. 
+					<br>Appendix A starting on page 17 is relevant to interpreting data fields.</li>
+			</ol>
+			<h3>Analytical/Documentation Tools</h3>
+			<ul>
+				<li>libreoffice calc to format, store and visualize results</li>
+				<li>mysql workbench to query data set</li>
+				<li>sublime text to edit html & css</li>
+			</ul>
+			<h3>Downloading Details</h3>
+			<ul>
+				<li>Downloaded a 53 mb comma seperated value text file.</li>
+				<li>Imported file to officelibre calc and saved in the ods format.</li>
+				<li>Downloaded provided HADS document to accurately interpret field names.</li>
+			</ul>
+			<h3>Formatting Details</h3>
+			<ul>
+				<li>The data set is in comma seperated format with a header of fields and comma seperated values in records with one record per line. The seperator in libreoffice are cells and with one record per row.</li>
+			</ul>
+			<h3>Uploading Details</h3>
+			<ul>
+				<li>Uploaded all files to git repository.</li>
+				<li>Linked all relevant files in the index.html file for references and requirements.</li>
+			</ul>
+		</section>
 		<hr>
-		<h2 id="analysis">Analysis</h2>
+		<section>
+			<h2 id="analysis">Analysis</h2>
+			<h3>Charts</h3>
+		</section>
 		<hr>
 		<h2 id="conclusions">Conclusions</h2>
 	</main>

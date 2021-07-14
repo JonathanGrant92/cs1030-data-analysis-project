@@ -31,6 +31,12 @@ header {
 	background: cornsilk;
 }
 
+hr {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border: 2px dashed;
+}
+
 main {
 	padding: 2em;
 	margin: 4em;
