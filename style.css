@@ -61,3 +61,7 @@ menu li:hover, menu li a:hover {
 section {
 	padding-left: 32px;
 }
+
+ul li {
+	padding-bottom: 6px;
+}
