@@ -11,6 +11,10 @@ a:hover {
 	color: black;
 }
 
+aside {
+	float: left;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -42,6 +46,7 @@ main {
 	margin: 4em;
 	margin-top: 12em;
 	text-align: justify;
+	line-height: 1.5;
 	background: lavender;
 }
 
@@ -63,5 +68,5 @@ section {
 }
 
 ul li {
-	padding-bottom: 6px;
+	/*line-height: 1.5;*/
 }
