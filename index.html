@@ -94,14 +94,28 @@
 					To address inquiries:
 					<ul>
 						<li>Records need to be filtered by values of several metrics.</li>
-						<li>Values should be plotted on a graph to visualize cross sections of data.</li>
+						<li>Values should be plotted on a graph to visualize relationships.</li>
 					</ul>
 					So, office software like libre office calc would be useful. However, mysql workbench is more familiar for querying data sets. Therefore, a combination of mysql workbench and libre office calc is desirable.
 				</li>
+				<li>Created a second sheet in Calc for data analysis.</li>
+					<ul>
+						<li>Created a legend of relevants of fields.</li>
+						<li>Counted and averaged records by relevant fields using built-in functions.</li>
+						<li>Sorted and counted different renter codes and display as a pie chat</li>
+					</ul>
+				<li>Explored Tableau as an option.</li>
+					<ul>
+						<li>Uploaded dataset csv file to a workbook.</li>
+						<li>Set BURDEN and ZINC2 as y and x axis, and filtered out records with default and negative values.</li>
+						<li>Customized graph with axis titles, scales and color.</li>
+						<li>Downloaded graph as an image for project.</li>
+					</ul>
+				<li>Analysed results and formed conclusion></li>
 			</ol>
 			<h3>Associated Sources</h3>
 			<ol>
-				<li><a href="documents/HADS_doc.pdf" target="_blank">Housing Affordability Documentation</a></li>
+				<li><a id="hads" href="documents/HADS_doc.pdf" target="_blank">Housing Affordability Documentation</a></li>
 				<li><a href="dataset/thads2013n.ods" target="">Housing Affordability Data Set</a>: 30.5mb download in ods format. 
 					<br>Appendix A starting on page 17 is relevant to interpreting data fields.</li>
 			</ol>
@@ -130,19 +144,24 @@
 		<hr>
 		<h2 id="analysis">Analysis</h2>
 		<section>
+			
 			<h3>Statistics</h3>
 			<img src="images/thads2013n-stats.png">
-			<aside>
-				<img src="images/proportionality-tenures.png" width="500">
-			</aside>
-			<img src="images/housing-cost-burden-over-monthly-income-graph.png">
-			<h3>Interpretation</h3>
-			<p>Monthly household income is negatively correlated to the housing cost burden of home owners</p>
+			<p>The average of median area income is $68,110. The fair market rent average is $1,164. The average poverty income level is $15,987. The average annual household income is $61,536. The average monthly housing cost is $1061.61 or $12,739.36 annually. Note that the housing cost is approximately 79.69% of the average poverty income level.<br>Burden is a housing cost metric determined by the division of monthly housing cost over monthly income for a record (<a href="#hads">HADS</a>: 5).</p>
+
+			<hr>
+			<h3>Renter Types</h3>
+			<img src="images/proportionality-tenures.png" width="500">
+			<p>Approximate 55% of records indicate home ownership. The remaining records indicate renters of three categories of units; apartments, houses, and not specified.</p>
+			<hr>
+			<h3>Burden to Income Correlation?</h3>
+			<img src="images/housing-cost-burden-over-monthly-income-graph.png" width="500">
+			<p>Monthly household income is negatively correlated to the housing cost burden of home owners. The relationship approximates the positive x-axis of tge parent function x^-2. The more income you earn is the quadratic reciprocal of your housing cost burden. the less income you earn is quadratically related to your housing burden; burden increase steepens with less income.</p>
 		</section>
 		<hr>
 		<h2 id="conclusions">Conclusions</h2>
 		<section>
-			
+			<p>The analysis and visuals of burden cost over monthly income answers the first inquiry. There exists a strong negative correlation between housing cost burden and a household's income. Households below the poverty line carry a disproportionate share of the nation's housing burden.</p>
 		</section>
 	</main>
 
